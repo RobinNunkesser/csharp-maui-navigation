@@ -1,5 +1,4 @@
-﻿
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using Microsoft.Maui.Controls;
 
 namespace NavigationRecipe
@@ -11,12 +10,20 @@ namespace NavigationRecipe
             InitializeComponent();
         }
 
-        async void Button_Clicked(System.Object sender, System.EventArgs e)
+        async void Button_Clicked(
+            System.Object sender,
+            System.EventArgs e
+        )
         {
-            await Navigation.PushAsync(new SecondLevelPage("Hello 2nd level!"));
+            await Navigation.PushAsync(
+                new SecondLevelPage("Hello 2nd level!")
+            );
         }
 
-        void ToolbarItem_Clicked(System.Object sender, System.EventArgs e)
+        void ToolbarItem_Clicked(
+            System.Object sender,
+            System.EventArgs e
+        )
         {
             Debug.WriteLine("Toolbar button clicked.");
         }
